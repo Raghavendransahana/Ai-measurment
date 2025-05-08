@@ -19,7 +19,10 @@ export const taskSlice = createSlice({
     },
     markCompleted: (state, action) => {
       const task = state[action.payload];
-      if (task) task.completed = true;
+      if (task) {
+        task.completed = true;
+        task.completedAt = new Date().toISOString(); // Store the completion date and time
+      }
       saveTasksToLocalStorage(state);
     },
     removeTask: (state, action) => {

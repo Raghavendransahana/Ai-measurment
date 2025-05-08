@@ -15,7 +15,6 @@ export default function FormTwo() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
- 
   const customer = useSelector((state) => state.customer);
 
   const handleChange = (e) => {
@@ -27,13 +26,15 @@ export default function FormTwo() {
     e.preventDefault();
     if (form.confirm) {
       const task = {
-        name: customer.name,  
+        name: customer.name,
         dresses: form.dresses,
         advance: form.advance,
         total: form.total,
         due: form.due,
         completed: false,
       };
+
+      localStorage.setItem('totalAmount', form.total);  // Save to localStorage
 
       dispatch(addTask(task));
 
