@@ -11,6 +11,8 @@ const Home = () => {
       className="min-h-screen flex flex-col items-center pt-16"
       style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }}
     >
+
+
       <motion.img
         src={img}
         alt="Hero"
@@ -49,21 +51,34 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        {[
-          { icon: <ShoppingBag className="text-pink-700 w-12 h-12 mb-4" />, title: "Shop Now", description: "Explore our wide range of products." },
-          { icon: <DollarSign className="text-pink-700 w-12 h-12 mb-4" />, title: "Affordable Prices", description: "Quality products at the best prices." },
-          { icon: <ClipboardList className="text-pink-700 w-12 h-12 mb-4" />, title: "Easy Orders", description: "Seamless and hassle-free ordering." },
-          { icon: <Smile className="text-pink-700 w-12 h-12 mb-4" />, title: "Customer Satisfaction", description: "Your happiness is our priority." },
-        ].map((card, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300"
-          >
-            {card.icon}
-            <h3 className="text-lg font-bold">{card.title}</h3>
-            <p className="text-gray-600 text-sm text-center">{card.description}</p>
-          </div>
-        ))}
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <ShoppingBag className="text-pink-700 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">Shop Now</h3>
+          <p className="text-gray-600 text-sm text-center">
+            Explore our wide range of products.
+          </p>
+        </div>
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <DollarSign className="text-pink-700 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">Affordable Prices</h3>
+          <p className="text-gray-600 text-sm text-center">
+            Quality products at the best prices.
+          </p>
+        </div>
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <ClipboardList className="text-pink-700 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">Easy Orders</h3>
+          <p className="text-gray-600 text-sm text-center">
+            Seamless and hassle-free ordering.
+          </p>
+        </div>
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <Smile className="text-pink-700 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">Customer Satisfaction</h3>
+          <p className="text-gray-600 text-sm text-center">
+            Your happiness is our priority.
+          </p>
+        </div>
       </motion.div>
 
       <motion.div
@@ -72,20 +87,27 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        {[
-          { icon: <Star className="text-yellow-500 w-12 h-12 mb-4" />, title: "Top Quality", description: "Only the best materials and craftsmanship." },
-          { icon: <Truck className="text-blue-500 w-12 h-12 mb-4" />, title: "Fast Delivery", description: "Get your orders delivered quickly and safely." },
-          { icon: <Smile className="text-green-500 w-12 h-12 mb-4" />, title: "24/7 Support", description: "We're here to help anytime, anywhere." },
-        ].map((card, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300"
-          >
-            {card.icon}
-            <h3 className="text-lg font-bold">{card.title}</h3>
-            <p className="text-gray-600 text-sm text-center">{card.description}</p>
-          </div>
-        ))}
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <Star className="text-yellow-500 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">Top Quality</h3>
+          <p className="text-gray-600 text-sm text-center">
+            Only the best materials and craftsmanship.
+          </p>
+        </div>
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <Truck className="text-blue-500 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">Fast Delivery</h3>
+          <p className="text-gray-600 text-sm text-center">
+            Get your orders delivered quickly and safely.
+          </p>
+        </div>
+        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg">
+          <Smile className="text-green-500 w-12 h-12 mb-4" />
+          <h3 className="text-lg font-bold">24/7 Support</h3>
+          <p className="text-gray-600 text-sm text-center">
+            We're here to help anytime, anywhere.
+          </p>
+        </div>
       </motion.div>
 
       <footer className="mt-16 text-center text-gray-600 text-sm">

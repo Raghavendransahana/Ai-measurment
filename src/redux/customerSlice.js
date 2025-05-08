@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  name: '',
-  phone: '',
-  email: '',
-  photo: null,
+  // name: '',
+  // phone: '',
+  // email: '',
+  // photo: null,
 };
 
 const customerSlice = createSlice({

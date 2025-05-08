@@ -41,35 +41,42 @@ const Inspirations = () => {
   };
 
   return (
-    <>    <FloatingImage/>
-    <Box p={4}>
-      <Typography variant="h4" fontWeight="bold" gutterBottom>
-        Dress Inspirations
-      </Typography>
+    <>    
+      <FloatingImage />
+      <Box
+     height={'100vh'}
+        p={4}
+        sx={{
+          background: 'linear-gradient(to right, #ffffff, #F8BBD0)',
+        }}
+      >
+        <Typography variant="h4" fontWeight="bold" gutterBottom>
+          Dress Inspirations
+        </Typography>
 
-      <form onSubmit={handleSearch}>
-        <Stack direction="row" spacing={2} sx={{ mb: 4 }}>
-          <TextField
-            label="Search Dress Type"
-            variant="outlined"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            fullWidth
-          />
-          <Button type="submit" variant="contained" color="primary">
-            Search
-          </Button>
-        </Stack>
-      </form>
+        <form onSubmit={handleSearch}>
+          <Stack direction="row" spacing={2} sx={{ mb: 4 }}>
+            <TextField
+              label="Search Dress Type"
+              variant="outlined"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              fullWidth
+            />
+            <Button type="submit" variant="contained" color="primary">
+              Search
+            </Button>
+          </Stack>
+        </form>
 
-      <Grid container spacing={2}>
-        {images.map((img) => (
-          <Grid item xs={12} sm={6} md={4} key={img.id}>
-            <Inspo url={img.src.large} alt={img.photographer} />
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+        <Grid container spacing={2}>
+          {images.map((img) => (
+            <Grid item xs={12} sm={6} md={4} key={img.id}>
+              <Inspo url={img.src.large} alt={img.photographer} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </>
   );
 };
